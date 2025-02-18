@@ -19,7 +19,7 @@ cd Giro-Teste_Pratico
 
 2️⃣ Crie um ambiente virtual e instale as dependências
 
-No Windows
+No Windows:
 ```
 python -m venv venv
 venv\Scripts\activate
@@ -40,7 +40,6 @@ pip install -r requirements.txt
 No caminho \Giro_Teste-Pratico\api_investimentos\api_investimentos\settings.py existe a especificação de DATABASES, verifique se está tudo corretamente configurado para o seu postgresql.
 
 
-
 4️⃣ Inicie o postgresql na máquina (certifique que a porta esta correspondente a do settings do app) e aplique as migrações
 
 Iniciando o servidor:
@@ -49,6 +48,8 @@ Iniciando o servidor:
 ```
 
 Aplicando migrações:
+No caminho \Giro_Teste-Pratico\api_investimentos, rode o comando abaixo.
+
 ```
 python manage.py makemigrations
 python manage.py migrate
