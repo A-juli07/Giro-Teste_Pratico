@@ -10,4 +10,8 @@ router.register(r'investments', InvestmentHistoryViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('exchange-rates/old/', ExchangeRateViewSet.as_view({'delete': 'old'}), name='exchange-rate-old'),
+    path('exchange-rates/<int:id>/', ExchangeRateViewSet.as_view({'put': 'update'}), name='exchange-rate-detail'),
+    path('investors/<int:id>/', InvestorViewSet.as_view({'delete': 'destroy'}), name='investor-detail'),
+
 ]
