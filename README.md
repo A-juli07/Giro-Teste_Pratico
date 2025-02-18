@@ -19,7 +19,7 @@ Uma API RESTful desenvolvida com Django e Django REST Framework para gerenciar m
 1️⃣ Clone este repositório
 
 ```
-Bloco de código
+
 ```
 
 2️⃣ Crie um ambiente virtual e instale as dependências
