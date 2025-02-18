@@ -21,4 +21,6 @@ PostgreSQL
 
 4️⃣ Inicie o postgresql na máquina (certifique que a porta esta correspondente a do settings do app)
 
+"C:\Program Files\PostgreSQL\16\bin\pg_ctl.exe" start -D "C:\Program Files\PostgreSQL\16\data"
+
 5️⃣ Inicie o servidor
