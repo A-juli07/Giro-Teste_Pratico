@@ -6,6 +6,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from datetime import datetime, timedelta
 
+
 class CurrencyViewSet(viewsets.ModelViewSet):
     queryset = Currency.objects.all()
     serializer_class = CurrencySerializer
@@ -24,8 +25,9 @@ class ExchangeRateViewSet(viewsets.ModelViewSet):
     serializer_class = ExchangeRateSerializer
 
     def perform_create(self, serializer):
-        # Adicionar lógica de validação de dados se necessário
         serializer.save()
+
+    #Lista a variação por mais recentes e mais antigas
 
     @action(detail=False, methods=['get'])
     def recent(self, request):
