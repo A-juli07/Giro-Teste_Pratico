@@ -24,8 +24,8 @@ class ExchangeRate(models.Model):
         return f"{self.currency.name} ({self.date})"
     
 class InvestmentHistory(models.Model):
-    investor = models.ForeignKey(Investor, related_name='investments', on_delete=models.CASCADE)
-    currency = models.ForeignKey(Currency, related_name='investments', on_delete=models.CASCADE)
+    investor = models.ForeignKey(Investor, related_name='investments',on_delete=models.CASCADE)
+    currency = models.ForeignKey(Currency, related_name='investments',on_delete=models.CASCADE)
     initial_amount = models.DecimalField(max_digits=10, decimal_places=2)
     months= models.IntegerField()
     interest_rate = models.FloatField()
