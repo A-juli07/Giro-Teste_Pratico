@@ -48,6 +48,7 @@ Iniciando o servidor:
 ```
 
 Aplicando migrações:
+
 No caminho \Giro_Teste-Pratico\api_investimentos, rode o comando abaixo.
 
 ```
