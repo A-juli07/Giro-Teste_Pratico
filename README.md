@@ -1,4 +1,4 @@
-#📈 API de Gestão de Investimentos 💰
+# 📈 API de Gestão de Investimentos 💰
 Uma API RESTful desenvolvida com Django e Django REST Framework para gerenciar moedas e investidores.
 
 ##🚀 Tecnologias Utilizadas
@@ -8,7 +8,7 @@ Uma API RESTful desenvolvida com Django e Django REST Framework para gerenciar m
 - Django REST Framework
 - PostgreSQL
 
-##📌 Funcionalidades
+## 📌 Funcionalidades
 
 ✅ Cadastro e listagem de moedas (ex: Bitcoin, Dólar, Real, etc.)
 ✅ Cadastro e listagem de investidores com e-mail único
