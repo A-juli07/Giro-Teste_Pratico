@@ -1,4 +1,5 @@
 from rest_framework import viewsets
+from rest_framework import status
 from .models import Currency, Investor, ExchangeRate, InvestmentHistory
 from .serializers import CurrencySerializer, InvestorSerializer, ExchangeRateSerializer, InvestmentHistorySerializer
 from rest_framework.decorators import action
@@ -36,9 +37,12 @@ class ExchangeRateViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['delete'])
     def old(self, request):
         thirty_days_ago = datetime.now() - timedelta(days=30)
-        ExchangeRate.objects.filter(date__lte=thirty_days_ago).delete()
-        return Response({"message": "Registros antigos removidos com sucesso."})
+        deleted_count, _ = ExchangeRate.objects.filter(date__lte=thirty_days_ago).delete()
 
+        if deleted_count > 0:
+            return Response(status=status.HTTP_204_NO_CONTENT)  # Retorna 204 quando exclui registros
+        return Response({"message": "Nenhum registro para excluir."}, status=status.HTTP_200_OK)  # 200 se nada for excluído
+    
 class InvestmentHistoryViewSet(viewsets.ModelViewSet):
     queryset = InvestmentHistory.objects.all()
     serializer_class = InvestmentHistorySerializer
