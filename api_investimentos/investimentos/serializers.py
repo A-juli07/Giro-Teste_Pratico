@@ -17,7 +17,7 @@ class ExchangeRateSerializer(serializers.ModelSerializer):
 
     class Meta: 
         model = ExchangeRate
-        fields = ['date', 'daily_variation', 'daily_rate', 'currency', 'currency_type']
+        fields = ['date', 'daily_variation', 'daily_rate','currency', 'currency_type']
 
 
 class InvestmentHistorySerializer(serializers.ModelSerializer):
