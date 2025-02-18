@@ -34,6 +34,8 @@ class InvestmentHistoryModelTest(TestCase):
         self.assertEqual(investment.currency.name, "Euro")
         self.assertEqual(float(investment.final_amount), 1050.00)
 
+#Testa o update dos dados da moeda e a exclusão de dados com mais de 30 dias 
+
 class ExchangeRateAPITestCase(APITestCase):
     def test_update_exchange_rate(self):
         currency = Currency.objects.create(name="Dólar", type="USD")
@@ -85,6 +87,8 @@ class ExchangeRateAPITestCase(APITestCase):
             self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         else:
             self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+#Verifica a exclusão de um investidor
 
 class InvestorAPITestCase(APITestCase):
     def test_delete_investor_and_investments(self):
