@@ -49,9 +49,8 @@ Iniciando o servidor:
 
 Aplicando migrações:
 
-No caminho \Giro_Teste-Pratico\api_investimentos, rode o comando abaixo.
-
 ```
+cd api_investimentos
 python manage.py makemigrations
 python manage.py migrate
 ```
@@ -61,6 +60,7 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+
 
 ## 🧪 Executando os Testes
 
